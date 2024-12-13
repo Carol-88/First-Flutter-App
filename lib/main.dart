@@ -1,3 +1,4 @@
+import 'package:actividad_1_3/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -76,10 +77,23 @@ class FitnessHomePage extends StatelessWidget {
               style: AppStyles.titleMedium.copyWith(color: Colors.white),
             ),
             const Spacer(),
-            const CircleAvatar(
-              radius: 20,
-              backgroundImage: NetworkImage(
-                  'https://randomuser.me/api/portraits/women/44.jpg'), // Imagen de usuario
+            Hero(
+              tag: 'profile-picture', // Etiqueta única para la animación Hero
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfilePage()),
+                  );
+                },
+                child: const CircleAvatar(
+                  radius: 20,
+                  backgroundImage: NetworkImage(
+                    'https://randomuser.me/api/portraits/women/44.jpg',
+                  ),
+                ),
+              ),
             ),
           ],
         ),
