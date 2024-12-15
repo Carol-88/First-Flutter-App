@@ -30,29 +30,30 @@ class AppStyles {
   static const Color greyText = Colors.black45;
 
   static TextStyle titleLarge = GoogleFonts.montserrat(
-    fontSize: 30,
+    fontSize: 40,
     color: greyText,
   );
 
   static TextStyle titleMedium = GoogleFonts.montserrat(
     fontSize: 24,
+    fontWeight: FontWeight.bold,
     color: backgroundColor,
   );
 
   static TextStyle activityType = GoogleFonts.montserrat(
     fontSize: 18,
-    color: Colors.black,
+    color: greyText,
   );
 
   static TextStyle distance = GoogleFonts.montserrat(
     fontSize: 24,
     fontWeight: FontWeight.normal,
-    color: Colors.black,
+    color: greyText,
   );
 
   static TextStyle textSmall = GoogleFonts.montserrat(
     fontSize: 14,
-    color: Colors.black,
+    color: greyText,
   );
 }
 
