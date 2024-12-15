@@ -21,7 +21,9 @@ class ProfilePage extends StatelessWidget {
           const Spacer(), // Espaciador para centrar el título
           Text(
             "Profile",
-            style: AppStyles.titleMedium.copyWith(color: Colors.white),
+            style: AppStyles.titleMedium.copyWith(
+              color: Colors.white,
+            ),
           ),
           const Spacer(),
         ]),
@@ -97,7 +99,7 @@ class ProfilePage extends StatelessWidget {
             Icon(
               getIconForLabel(label), // Ícono dinámico basado en el label
               size: 40.0,
-              color: Colors.black,
+              color: AppStyles.black,
             ),
             const SizedBox(height: 8.0),
             Text(
@@ -106,7 +108,7 @@ class ProfilePage extends StatelessWidget {
             ),
             Text(
               value,
-              style: AppStyles.titleMedium.copyWith(color: Colors.black),
+              style: AppStyles.distance,
             ),
           ],
         ),
@@ -126,6 +128,7 @@ class ProfilePage extends StatelessWidget {
             min: 0,
             max: 200,
             activeColor: AppStyles.accentColor,
+            inactiveColor: AppStyles.greyText,
             onChanged: (_) {}, // Slider fijo (no funcional)
           ),
           Text(textValue, style: AppStyles.textSmall)

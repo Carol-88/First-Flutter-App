@@ -27,33 +27,33 @@ class AppStyles {
   static const Color darkBlue = Color(0xFF3407DA);
   static const Color backgroundColor = Color.fromARGB(255, 253, 242, 250);
   static const Color lightGrey = Color.fromARGB(255, 249, 235, 244);
+  static const Color black = Colors.black;
   static const Color greyText = Colors.black45;
 
   static TextStyle titleLarge = GoogleFonts.montserrat(
     fontSize: 40,
-    color: greyText,
+    color: black,
   );
 
   static TextStyle titleMedium = GoogleFonts.montserrat(
     fontSize: 24,
-    fontWeight: FontWeight.bold,
     color: backgroundColor,
   );
 
   static TextStyle activityType = GoogleFonts.montserrat(
     fontSize: 18,
-    color: greyText,
+    color: black,
   );
 
   static TextStyle distance = GoogleFonts.montserrat(
     fontSize: 24,
     fontWeight: FontWeight.normal,
-    color: greyText,
+    color: black,
   );
 
   static TextStyle textSmall = GoogleFonts.montserrat(
     fontSize: 14,
-    color: greyText,
+    color: black,
   );
 }
 
@@ -75,7 +75,9 @@ class FitnessHomePage extends StatelessWidget {
             const Spacer(), // Espaciador para centrar el título
             Text(
               "Fitness Time",
-              style: AppStyles.titleMedium.copyWith(color: Colors.white),
+              style: AppStyles.titleMedium.copyWith(
+                color: AppStyles.backgroundColor,
+              ),
             ),
             const Spacer(),
             Hero(
@@ -115,8 +117,9 @@ class FitnessHomePage extends StatelessWidget {
                       children: [
                         Text(
                           'Hola Antònia,',
-                          style: AppStyles.titleMedium
-                              .copyWith(color: AppStyles.greyText),
+                          style: AppStyles.titleMedium.copyWith(
+                              color: AppStyles.greyText,
+                              fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8),
                         Text(
@@ -130,6 +133,7 @@ class FitnessHomePage extends StatelessWidget {
                             style: AppStyles.textSmall.copyWith(
                               color: AppStyles.darkBlue,
                               fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.underline,
                             ),
                           ),
                         ),
@@ -144,8 +148,8 @@ class FitnessHomePage extends StatelessWidget {
               // Sección "Darreres activitats"
               Text(
                 'Darreres activitats',
-                style:
-                    AppStyles.titleMedium.copyWith(color: AppStyles.greyText),
+                style: AppStyles.titleMedium.copyWith(
+                    color: AppStyles.greyText, fontWeight: FontWeight.bold),
               ),
               const Divider(),
               const SizedBox(height: 8),
